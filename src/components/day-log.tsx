@@ -14,7 +14,7 @@ function DayLog() {
 	useEffect(() => {
 		const timer = setInterval(() => {
 			setCurTime(Date.now)
-		}, 1000)
+		}, 10000)
 		return () => clearInterval(timer)
 	}, [])
 
