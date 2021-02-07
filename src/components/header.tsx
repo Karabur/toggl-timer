@@ -12,7 +12,9 @@ function Header() {
 		<div className={styles.header}>
 			<div className={styles.projects}>
 				{store.projects.map((project) => (
-					<div style={{ background: project.color }}>{project.name}</div>
+					<div key={project.id} style={{ background: project.color }}>
+						{project.name}
+					</div>
 				))}
 			</div>
 			<SettingOutlined className={styles.settingsIcon} onClick={onSettingsClick} />
