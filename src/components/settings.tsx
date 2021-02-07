@@ -51,7 +51,6 @@ function Settings() {
 				</div>
 			}
 		>
-			{store.projects.map((p) => p.name)}
 			<Form
 				initialValues={{
 					apiToken: store.apiToken,
