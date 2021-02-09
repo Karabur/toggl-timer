@@ -10,11 +10,18 @@ export interface Project {
 	color: string
 }
 
+export interface Timer {
+	projectId: number
+	started: boolean
+}
+
 class Store {
 	@observable apiToken: string | null = null
 	@observable projects: Project[] = []
 	@ignore @observable loaded = false
 	@ignore @observable showSettings = false
+
+	@observable currentTimer: Timer | null = null
 
 	constructor() {
 		makeAutoObservable(this)

@@ -2,6 +2,8 @@ import { observer } from 'mobx-react-lite'
 import styles from './header.module.sass'
 import { SettingOutlined } from '@ant-design/icons'
 import store from '../store'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 function Header() {
 	function onSettingsClick() {
@@ -17,7 +19,13 @@ function Header() {
 					</div>
 				))}
 			</div>
-			<SettingOutlined className={styles.settingsIcon} onClick={onSettingsClick} />
+			<div className={styles.status}>
+				<FontAwesomeIcon className={styles.statusIcon} icon={faCoffee} />
+			</div>
+
+			<div className={styles.rightBlock}>
+				<SettingOutlined className={styles.settingsIcon} onClick={onSettingsClick} />
+			</div>
 		</div>
 	)
 }

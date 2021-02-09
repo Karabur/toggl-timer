@@ -5,6 +5,8 @@ import store from '../store'
 import { mixColors } from '@adso-ts/mix-colors'
 import RollingCounter from './rolling-counter'
 import { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 function Timer() {
 	const [time, setTime] = useState(12303)
